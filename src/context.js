@@ -55,6 +55,7 @@ const ContextProvider = ({children}) => {
                 setInput('')
                 inputRef.current.blur()
                 setModalContent('Item edited successfully')
+                window.location.href = '/'
 
                 }else{
 
@@ -70,6 +71,7 @@ const ContextProvider = ({children}) => {
 
             setItems(prev => [...prev, {name: input, done: false}])
             setModalContent('Item added successfully')
+            window.location.href = '/'
 
         }else{
 
@@ -78,8 +80,6 @@ const ContextProvider = ({children}) => {
 
         }
         setInput('')
-
-        window.location.href = '/'
     }
 
     //seting isEditing to true to handleSubmit when the form is in editing mode
